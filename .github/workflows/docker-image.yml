@@ -38,12 +38,12 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t joancema/docker-graphql:$NEW_VERSION .
-        docker build -t joancema/docker-graphql:latest .
+        docker build -t tornillo21/practica-actions:$NEW_VERSION .
+        docker build -t tornillo21/practica-actions:latest .
         
     - name: Push Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push joancema/docker-graphql:$NEW_VERSION
-        docker push joancema/docker-graphql:latest
+        docker push tornillo21/practica-actions:$NEW_VERSION
+        docker push tornillo21/practica-actions:latest
